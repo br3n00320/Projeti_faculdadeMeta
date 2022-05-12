@@ -4,19 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formulario</title>
+    <title>formuário</title>
+
+        <style>
+            
+        .box{
+               position: absolute;
+               top:50%;
+               left:50%;      
+               transform: translate(-50%,-50%);
+         }
+             
+         /* .inputuser{
+            
+         }       */
+        
+            
+         </style>
+
+
 </head>
 <body>
-    <div class="for"> 
+    
+    <div class="box"> 
         <form action=""> 
             <fieldset>
-                <legend>   <b> FÓRMULARIO DE PROTOCOLO  </b> </legend>
+                <legend>   <b> FORMULÁRIO DE PROTOCOLO  </b> </legend>
                 <br>
-                <div class="inputFor">
-                <input type ="text" name="nome" id="nome" class="inputuser" required >
+
+                <div class="inputFor"> <input type ="text" name="Glebar" id="Glebar" class="inputuser" required >
+                <label for="nome">Glebar</label>
+                </div>
+
+                <br> 
+
+                <div class="inputFor"><input type ="text" name="Município" id="Município" class="inputuser" required >
+                    <label for="nome">Município </label></div>
+
+                <br> 
+
+                <div class="inputFor"><input type ="text" name="nome" id="nome" class="inputuser" required >
+                    <label for="nome"> Nome completo </label>
+                    </div>
+                
                 <br>
-                <label for="nome">nome completo </label>
-                 </div>
+
+                <div class="inputFor"><input type ="number"name="processo"id="processo" class="inputuser"required >
+                <label for="nome">Processo Nº</label></div>
+
+                <br>
+
+                <div class="inputFor"><input type ="text" name="Entrada" id="Entrada" class="inputuser" required >
+                    <label for="nome">Entrada</label></div>
+
+                <br>
+                
+                <div class="inputFor"><input type ="text" name="area" id="area" class="inputuser" required >
+                    <label for="nome">ha / m^2</label></div>
+
+                <br>
+
+               <div class="inputFor"> <input type ="text" name="vist" id="vist" class="inputuser" required >
+                <label for="nome">vist.</label></div>
+
+                <br>
+
+                <div class="inputFor"><input type ="text" name="caixa" id="caixa" class="inputuser" required >
+                    <label for="nome">Caixa</label></div>
+
+                <br>
+
+                <div class="inputFor"><input type ="text" name="estatus" id="estatus" class="inputuser" required >
+                    <label for="nome">estatus</label></div>
+
+                <br>
+
+                <div class="inputFor"><input type ="text" name="observações" id="observações" class="inputuser" required >
+                    <label for="nome">observações</label>
+                </div>
+
+                <br>
+                
+            <button>Pesquisar</button>
+
             </fieldset>
 
         </form>
