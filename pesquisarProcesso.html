@@ -1,12 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pesquisar</title>
+
+    <style>
+            
+        .box{
+               position: absolute;
+               top:50%;
+               left:50%;      
+               transform: translate(-50%,-50%);
+            
+               
+            }
+             
+           
+        
+            
+    
+    </style>
+
+
+
 </head>
 <body>
+    <div class="box">
+        <form action="">
+        <fieldset>
+            <legend>   <b> PESQUISAR PROCESSO  </b> </legend>
+            <br>
     
+        <div class="inputFor"> <input type ="number" name="PROCESSO"  id="PROCESSO" class="inputuser" required>
+            <!-- pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}\-[0-9]{2}" placeholder="xxx.xxx.xxx-xx" -->
+            <label for="PROCESSO">Nº PROCESSO </label></div>
+                   <br> 
+        <!-- <p> </p>
+        <div class="inputFor"> <input type ="number" name="CNPJ" id="CNPJ" class="inputuser" required>
+        <label for="CNPJ">CNPJ</label></div>
+         <br>  -->
+                   <button>Buscar</button>
+        
+        </fieldset>
+        </form>
+        </div>
 </body>
 </html>
