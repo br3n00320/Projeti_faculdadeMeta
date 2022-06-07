@@ -2,12 +2,19 @@
 
 $dbHost = 'LocalHost';
 $dbUsername = 'root';
-$dbPassword = '';
+$dbPassword = 'breno0320';
 $dbName = 'sistemaprotocolo';
 
-$conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
+$conexao = new mysqli ($dbHost,$dbUsername,$dbPassword,$dbName);
 
+// if($conexao->connect_errno)
+// {
 
+//     echo "erro";
+// }
+// else{
 
+//     echo "ok";
+// }
 ?>
 
