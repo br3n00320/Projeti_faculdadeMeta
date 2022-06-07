@@ -2,8 +2,9 @@
 
 $dbHost = 'LocalHost';
 $dbUsername = 'root';
-$dbPassword = 'breno0320';
+$dbPassword = 'admin';
 $dbName = 'sistemaprotocolo';
+$dbport = 3306; 
 
 $conexao = new mysqli ($dbHost,$dbUsername,$dbPassword,$dbName);
 
