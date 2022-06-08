@@ -1,20 +1,5 @@
 <?php 
-
-
-
-
 if (isset($_POST['submit']))
-
-
-// {
-//     print_r ($_post['gleba']);
-//     print_r ($_post['municipio']);
-//     print_r ($_post['nome']);
-
-
-//  }
-
-
 
 {
      include_once ('config.php');
@@ -31,7 +16,19 @@ if (isset($_POST['submit']))
  $observacoes = $_POST ['observacoes'];
 
 $result = mysqli_query ($conexao, "INSERT INTO cadastro (gleba, municipio, nome, processo, entrada, area, vistoria, caixa, estatus, observacoes) VALUES ('$gleba', '$municipio', '$nome', '$processo', '$entrada', '$area', '$vistoria', '$caixa', '$estatus', '$observacoes')");
- }
+ 
+ 
+if (mysqli_affected_rows($conexao)){
+
+    echo "<script> alert('categoria cadastrada com sucesso.'); location.herf='../cadastrar.php';</script>";
+} 
+
+    
+
+}
+
+
+
 ?>
 
 
@@ -48,18 +45,78 @@ $result = mysqli_query ($conexao, "INSERT INTO cadastro (gleba, municipio, nome,
     <title>formulário</title>
 
         <style>
-            
+            body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+        }
         .box{
-               position: absolute;
-               top:50%;
-               left:50%;      
-               transform: translate(-50%,-50%);
-         }
-             
-         /* .inputuser{
-            
-         }       */
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 20%;
+        }
+        fieldset{
+            border: 3px solid dodgerblue;
+        }
+        legend{
+            border: 1px solid dodgerblue;
+            padding: 10px;
+            text-align: center;
+            background-color: dodgerblue;
+            border-radius: 8px;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput{
+            top: -20px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+        /* #data_nascimento{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px; 
+        }*/
         
+        #submit{
+            background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        #submit:hover{
+            background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
+        }
             
          </style>
 
@@ -73,34 +130,34 @@ $result = mysqli_query ($conexao, "INSERT INTO cadastro (gleba, municipio, nome,
                 <legend>   <b> FORMULÁRIO DE PROTOCOLO  </b> </legend>
                 <br>
 
-                <div class="inputFor"> <input type ="text" name="gleba" id="gleba" class="inputUser" required >
+                <div class="inputBox"> <input type ="text" name="gleba" id="gleba" class="inputUser" required >
                 <label for="gleba" class="labelInput" >Gleba</label>
                 </div>
 
                 <br> 
 
-                <div class="inputFor"><input type ="text" name="municipio" id="municipio" class="inputUser" required >
+                <div class="inputBox"><input type ="text" name="municipio" id="municipio" class="inputUser" required >
                     <label for="municipio" class="labelInput" >Município </label></div>
 
                 <br> 
 
-                <div class="inputFor"><input type ="text" name="nome" id="nome" class="inputUser" required >
+                <div class="inputBox"><input type ="text" name="nome" id="nome" class="inputUser" required >
                     <label for="nome" class="labelInput" > Nome completo </label>
                     </div>
                 
                 <br>
 
-                <div class="inputFor"><input type ="text"name="processo"id="processo" class="inputUser"  required >
+                <div class="inputBox"><input type ="text"name="processo"id="processo" class="inputUser"  required >
                 <label for="processo" class="labelInput">Nº Processo </label></div>
 
                 <br>
 
-                <div class="inputFor"><input type ="text" name="entrada" id="entrada" class="inputUser" required >
+                <div class="inputBox"><input type ="text" name="entrada" id="entrada" class="inputUser" required >
                     <label for="entrada" class="labelInput" >Entrada</label></div>
 
                 <br>
                 
-                <div class="inputFor"><input type ="text" name="area" id="area" class="inputUser" required >
+                <div class="inputBox"><input type ="text" name="area" id="area" class="inputUser" required >
                     <label for="area" class="labelInput" >Área (ha / m^2)</label></div>
 
                 
@@ -113,17 +170,17 @@ $result = mysqli_query ($conexao, "INSERT INTO cadastro (gleba, municipio, nome,
 
                 <br> <br>
 
-                <div class="inputFor"><input type ="text" name="caixa" id="caixa" class="inputUser" required >
+                <div class="inputBox"><input type ="text" name="caixa" id="caixa" class="inputUser" required >
                     <label for="caixa"class="labelInput" >Caixa</label></div>
 
                 <br>
 
-                <div class="inputFor"><input type ="text" name="estatus" id="estatus" class="inputUser" required >
+                <div class="inputBox"><input type ="text" name="estatus" id="estatus" class="inputUser" required >
                     <label for="estatus" class="labelInput" >Estatus</label></div>
 
                 <br>
 
-                <div class="inputFor"><input type ="text" name="observacoes" id="observacoes" class="inputUser" required >
+                <div class="inputBox"><input type ="text" name="observacoes" id="observacoes" class="inputUser" required >
                     <label for="observacoes" class="labelInput" >observações</label>
                 </div>
 

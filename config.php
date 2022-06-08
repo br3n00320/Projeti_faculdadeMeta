@@ -2,12 +2,14 @@
 
 $dbHost = 'LocalHost';
 $dbUsername = 'root';
-$dbPassword = 'admin';
+$dbPassword = 'breno0320';
 $dbName = 'sistemaprotocolo';
-$dbport = 3306; 
+$dbPort = 3306; 
 
-$conexao = new mysqli ($dbHost,$dbUsername,$dbPassword,$dbName);
+$conexao = mysqli_connect ($dbHost,$dbUsername,$dbPassword,$dbName,$dbPort);
 
+
+// new mysqli
 // if($conexao->connect_errno)
 // {
 
@@ -15,7 +17,7 @@ $conexao = new mysqli ($dbHost,$dbUsername,$dbPassword,$dbName);
 // }
 // else{
 
-//     echo "ok";
+//    echo "ok";
 // }
 ?>
 
