@@ -4,19 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesquisar</title>
+    <title>CPF</title>
 
     <style>
             
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+        }   
         .box{
-               position: absolute;
-               top:50%;
-               left:50%;      
-               transform: translate(-50%,-50%);
-            
-               
-            }
-             
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 25px;
+            border-radius: 25px;
+            width: 25%;
+        }
+        fieldset{
+            border: 3px solid dodgerblue;
+        }
+
+        legend{
+            border: 1px solid dodgerblue;
+            padding: 8px;
+            text-align: center;
+            background-color: dodgerblue;
+            border-radius: 8px;
+        }
+
+        .inputBox{
+            position: relative;
+        }
+
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2x;
+        }
+
+        .labelInput{
+            position: center;
+            top: 80px;
+            left: 50px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput
+        
+        {
+            top: -20px;
+            font-size: 10px;
+            color: dodgerblue;
+        
+        }
+        
+        button {
+            background-color: dodgerblue;
+            border: none; 
+            padding: 10px; 
+            width: 100%;
+            border-radius: 5px;
+            color: white;
+            font-size: 15px; 
+
+         }
+
+        button:hover{ 
+            background-color: deepskyblue;
+            cursor: pointer;}
            
         
             
@@ -31,14 +96,10 @@
             <legend>   <b> PESQUISAR CPF/CNPJ  </b> </legend>
             <br>
     
-        <div class="inputFor"> <input type ="number" name="CPF/CNPJ"  id="CPF/CNPJ" class="inputuser" required>
-            <!-- pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}\-[0-9]{2}" placeholder="xxx.xxx.xxx-xx" -->
-            <label for="CPF/CNPJ">CPF/CNPJ</label></div>
+        <div class="inputFor"> <input type ="text" name="CPF/CNPJ"  id="CPF/CNPJ" class="inputUser" required>
+            
+            <label for="CPF/CNPJ" class="labelInput">CPF/CNPJ</label></div>
                    <br> 
-        <!-- <p> </p>
-        <div class="inputFor"> <input type ="number" name="CNPJ" id="CNPJ" class="inputuser" required>
-        <label for="CNPJ">CNPJ</label></div>
-         <br>  -->
                    <button>Buscar</button>
         
         </fieldset>

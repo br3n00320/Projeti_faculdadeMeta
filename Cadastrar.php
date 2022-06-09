@@ -56,9 +56,9 @@ if (mysqli_affected_rows($conexao)){
             left: 50%;
             transform: translate(-50%,-50%);
             background-color: rgba(0, 0, 0, 0.6);
-            padding: 15px;
-            border-radius: 15px;
-            width: 20%;
+            padding: 25px;
+            border-radius: 25px;
+            width: 35%;
         }
         fieldset{
             border: 3px solid dodgerblue;
@@ -91,31 +91,27 @@ if (mysqli_affected_rows($conexao)){
             transition: .5s;
         }
         .inputUser:focus ~ .labelInput,
-        .inputUser:valid ~ .labelInput{
+        .inputUser:valid ~ .labelInput
+        
+        {
             top: -20px;
             font-size: 12px;
             color: dodgerblue;
         }
-        /* #data_nascimento{
-            border: none;
-            padding: 8px;
-            border-radius: 10px;
-            outline: none;
-            font-size: 15px; 
-        }*/
         
         #submit{
-            background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+            
+            background-color: dodgerblue;
+            border: none; 
+            padding: 12px; 
             width: 100%;
-            border: none;
-            padding: 15px;
-            color: white;
-            font-size: 15px;
-            cursor: pointer;
             border-radius: 10px;
+            color: white;
+            font-size: 15px; 
         }
         #submit:hover{
-            background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
+            background-color: deepskyblue;
+            cursor: pointer;
         }
             
          </style>

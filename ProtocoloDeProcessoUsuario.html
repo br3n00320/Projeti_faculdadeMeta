@@ -4,106 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protocolo de processo</title>
+    <title>Protocolo de processo USE </title>
 
     <style>
-        /* body {
+      body {
             font-family: Arial, Helvetica, sans-serif;
-            background-image: linear-gradient(45deg, blue, cyan);
+            background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+        } 
 
+        .box{
             
-        } */
-
-        div{
-            
-            /* background-color: rgba(0, 0, 0,0.8); */
-            position: absolute; 
+            color: white;
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
-            padding: 80px;
-            border-radius: 15px;
-            color: black;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 25px;
+            border-radius: 25px;
+            width: 35%;
         }
-
+        .ass{
+            border: 1px solid dodgerblue;
+            padding: 10px;
+            text-align: center;
+            background-color: dodgerblue;
+            border-radius: 8px;
+        }
         input{
 
             padding: 15px;
-            border: nome;
-            outline: nome;
             font-size: 15px;
-
-
-
         }
 
         button {
-            border: nome;
-            padding: 15px;
-            width: 100%;
-            border-radius: 10px ;
-        }
-
-        button {
-            border: nome; 
-            padding: 15px; 
-            width: 100%;
-            border-radius: 10px;
-            /* color: white; */
-            /* font-size: 15px; */
-        }
-          
-         /* button {
             background-color: dodgerblue;
-            border: nome; 
             padding: 15px; 
             width: 100%;
             border-radius: 10px;
-            color: white;
+            color: white; 
             font-size: 15px; 
+        }
+      
 
-         }  */
-
-         /* button:hover{ 
+         button:hover{ 
              background-color: deepskyblue; 
             cursor: pointer; 
+         }
 
 
-        }  */
+         a{
+            text-decoration: none;
+            color: white;
+            border: 3px solid dodgerblue;
+            border-radius: 2px;
+            padding: 2px;
+        }
+        a:hover{
+            background-color: dodgerblue;
+        }
 
     </style>
 </head>
 <body>
-    <div>
+    <div class="box">
         <form action=""> 
             <fieldset>
-                <legend>   <b> USUARIO </b> </legend>
+                <legend>   <b> USUÁRIO </b> </legend>
                 <br>
 
 
 
         <form action=""> 
             <fieldset>
-                <legend>   <b> SISTEMA DE PROTOCOLO  </b> </legend>
+                <legend class="ass">   <b> SISTEMA DE PROTOCOLO  </b> </legend>
                 <br>
 
-    <button type="button" form="Pesquisar Nome"> Pesquisar Nome </button>
-    <br>
-    <button type="button" form="Pesquisar CPF/CNPJ"> Pesquisar CPF/CNPJ </button> 
+     <a href="PesquisaNome.html"> Pesquisar Nome </a>
+    <br><br>
     
-    <br>
-    <button type="button" form="Pesquisar Processos"> Pesquisar Processos </button>
+    <a href="pesquisarCpf.html"> Pesquisar CPF/CNPJ </a> 
+    
+    <br><br>
+    <a href="pesquisarProcesso.html"> Pesquisar Processos </a>
                 
-    <br>
-    <button type="button" form="Cadastro"> Cadastrar </button>
-
-    <!-- falta desenvolver ainda
-    <br>
-    <button type="button" form="Adicionar usuario"> Adicionar usuario </button> 
-    
-    <br>
-    <button type="button" form="EXCLUIR PROCESSO"> EXCLUIR PROCESSO </button>  -->
-
+    <br><br>
+    <a href="Cadastrar.php"> Cadastrar </a>
 </fieldset>
 </form> 
 
