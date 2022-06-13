@@ -1,3 +1,30 @@
+<?php 
+
+
+include ('config.php');
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$telefone = $_POST[ 'telefone'];
+$cpf = $_POST['cpf'];
+$setor = $_POST['setor'];
+$cargo = $_POST['cargo'];
+$nome_login = $_POST['nome_login'];
+$senha = $_POST['senha'];
+$con_senha = $_POST['con_senha'];
+
+
+$sql = ("INSERT INTO cadastro () VALUES ()");
+
+mysqli_query($conexao, $sql);
+
+mysqli_close($conexao);
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -130,8 +157,8 @@
                 <br>
                 <div class="inputBox"><input type ="password"name="processo"id="processo" class="inputUser"  required >
                 <label for="processo" class="labelInput"> Confirma Senha </label></div>
-
-               
+<br><br>
+                <input type="submit" nome="submit" id= "submit"> 
                 </fieldset>
 
             </form>
