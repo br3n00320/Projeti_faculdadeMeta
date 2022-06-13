@@ -1,23 +1,24 @@
 <?php 
 
 
-include ('config.php');
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$telefone = $_POST[ 'telefone'];
-$cpf = $_POST['cpf'];
-$setor = $_POST['setor'];
-$cargo = $_POST['cargo'];
-$nome_login = $_POST['nome_login'];
-$senha = $_POST['senha'];
-$con_senha = $_POST['con_senha'];
+include ('config2.php');
+$nome2 = $_POST['nome'];
+$email2 = $_POST['email'];
+$telefone2 = $_POST[ 'telefone'];
+$cpf2 = $_POST['cpf'];
+$setor2 = $_POST['setor'];
+$cargo2 = $_POST['cargo'];
+$acesso2 = $_POST['acesso'];
+$nome_login2 = $_POST['nome_login'];
+$senha2 = $_POST['senha'];
+$confirma_senha2 = $_POST['confirma_senha'];
 
 
-$sql = ("INSERT INTO cadastro () VALUES ()");
+$sql = ("INSERT INTO usuario (nome,email,telefone,cpf,setor,cargo,acesso,nome_login,senha,confirma_senha) VALUES ('$nome2','$email2','$telefone2','$cpf2','$setor2','$cargo2','$acesso2','$nome_login2','$senha2','$confirma_senha2')");
 
-mysqli_query($conexao, $sql);
+mysqli_query($conexao2, $sql);
 
-mysqli_close($conexao);
+mysqli_close($conexao2);
 
 ?>
 
@@ -111,7 +112,7 @@ mysqli_close($conexao);
 </head>
 <body>
      <div class="box"> 
-        <form action="Cadastrar.php" method="POST"> 
+        <form action="Cadastrarusuario.php" method="POST"> 
             <fieldset>
                 <legend>   <b> CADASTRAR USUÁRIO  </b> </legend>
 
@@ -148,7 +149,14 @@ mysqli_close($conexao);
                 <div class="inputBox"><input type ="text"name="processo"id="processo" class="inputUser"  required >
                 <label for="processo" class="labelInput"> Cargo </label></div>
 
-                    <br>
+                <p>Acesso</p>
+                <input type="radio" id="administrador" name="administrador" value="administrador" > 
+                <label for="administrador">Administrador</label>
+                <input type="radio" id="usuario" name="usuario" value="usuario"> 
+                <label for="usuario">Usuário</label>
+
+                    <br><br>
+
                 <div class="inputBox"><input type ="text"name="processo"id="processo" class="inputUser"  required >
                 <label for="processo" class="labelInput"> Nome login </label></div>
                     <br>
