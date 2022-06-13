@@ -1,29 +1,26 @@
-<!-- <?php 
-// if (isset($_POST['submit']))
-
-// {
-//      include_once ('config.php');
-
-//  $gleba = $_POST['gleba'];
-//  $municipio = $_POST['municipio'];
-//  $nome = $_POST[ 'nome'];
-//  $processo = $_POST['processo'];
-//  $entrada = $_POST ['entrada'];
-//  $area = $_POST ['area'];
-//  $vistoria = $_POST['vistoria'];
-//  $caixa = $_POST['caixa'];
-//  $estatus = $_POST['estatus'];
-//  $observacoes = $_POST ['observacoes'];
-
-// $result = mysqli_query ($conexao, "INSERT INTO cadastro (gleba, municipio, nome, processo, entrada, area, vistoria, caixa, estatus, observacoes) VALUES ('$gleba', '$municipio', '$nome', '$processo', '$entrada', '$area', '$vistoria', '$caixa', '$estatus', '$observacoes')");
- 
- 
-// }
-
-?> -->
+<?php 
 
 
+include ('config.php');
+$gleba = $_POST['gleba'];
+$municipio = $_POST['municipio'];
+$nome = $_POST[ 'nome'];
+$processo = $_POST['processo'];
+$entrada = $_POST['entrada'];
+$area = $_POST['area'];
+$vistoria = $_POST['vistoria'];
+$caixa = $_POST['caixa'];
+$estatus = $_POST['estatus'];
+$observacoes = $_POST['observacoes'];
 
+
+$sql = ("INSERT INTO cadastro (gleba, municipio, nome, processo, entrada, area, vistoria, caixa, estatus, observacoes) VALUES ('$nome', '$municipio', '$nome', '$processo', '$entrada', '$area','$vistoria', '$caixa', '$estatus', '$observacoes')");
+
+mysqli_query($conexao, $sql);
+
+mysqli_close($conexao);
+
+?>
 
 
 
