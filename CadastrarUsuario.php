@@ -2,23 +2,23 @@
 
 
 include ('config2.php');
-$nome2 = $_POST['nome'];
-$email2 = $_POST['email'];
-$telefone2 = $_POST[ 'telefone'];
-$cpf2 = $_POST['cpf'];
-$setor2 = $_POST['setor'];
-$cargo2 = $_POST['cargo'];
-$acesso2 = $_POST['acesso'];
-$nome_login2 = $_POST['nome_login'];
-$senha2 = $_POST['senha'];
-$confirma_senha2 = $_POST['confirma_senha'];
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$telefone = $_POST[ 'telefone'];
+$cpf = $_POST['cpf'];
+$setor = $_POST['setor'];
+$cargo = $_POST['cargo'];
+$acesso = $_POST['acesso'];
+$nome_login = $_POST['nome_login'];
+$senha = $_POST['senha'];
+$confirma_senha = $_POST['confirma_senha'];
 
 
-$sql = ("INSERT INTO usuario (nome,email,telefone,cpf,setor,cargo,acesso,nome_login,senha,confirma_senha) VALUES ('$nome2','$email2','$telefone2','$cpf2','$setor2','$cargo2','$acesso2','$nome_login2','$senha2','$confirma_senha2')");
+$sql1 = ("INSERT INTO usuario (nome,email,telefone,cpf,setor,cargo,acesso,nome_login,senha,confirma_senha) VALUES ('$nome','$email','$telefone','$cpf','$setor','$cargo','$acesso','$nome_login','$senha','$confirma_senha')");
 
-mysqli_query($conexao2, $sql);
+mysqli_query ($conexao2, $sql1);
 
-mysqli_close($conexao2);
+mysqli_close ($conexao2);
 
 ?>
 
@@ -116,55 +116,55 @@ mysqli_close($conexao2);
             <fieldset>
                 <legend>   <b> CADASTRAR USUÁRIO  </b> </legend>
 
-                <div class="inputBox"><input type ="text" name="municipio" id="municipio" class="inputUser" required >
-                    <label for="municipio" class="labelInput" >Nome completo </label></div>
+                <div class="inputBox"><input type ="text" name="nome_completo" id="nome_completo" class="inputUser" required >
+                    <label for="nome" class="labelInput" >Nome completo </label></div>
 
                 <br>
 
-                <div class="inputBox"> <input type ="text" name="gleba" id="gleba" class="inputUser" required >
-                <label for="gleba" class="labelInput" >Email</label>
+                <div class="inputBox"> <input type ="text" name="email" id="email" class="inputUser" required >
+                <label for="email" class="labelInput" >Email</label>
                 </div>
 
                 <br>
 
-                <div class="inputBox"><input type ="text" name="entrada" id="entrada" class="inputUser" required >
-                    <label for="entrada" class="labelInput" >Telefone</label></div>
+                <div class="inputBox"><input type ="text" name="telefone" id="telefone" class="inputUser" required >
+                    <label for="telefone" class="labelInput" >Telefone </label></div>
 
            
 
 
 
                     <br>
-                <div class="inputBox"><input type ="text" name="area" id="area" class="inputUser" required >
-                        <label for="area" class="labelInput" >CPF</label></div>
+                <div class="inputBox"><input type ="text" name="cpf" id="cpf" class="inputUser" required >
+                        <label for="cpf" class="labelInput" >CPF</label></div>
 
                 <br> 
 
-                <div class="inputBox"><input type ="text" name="nome" id="nome" class="inputUser" required >
-                    <label for="nome" class="labelInput" > Setor </label>
+                <div class="inputBox"><input type ="text" name="setor" id="setor" class="inputUser" required >
+                    <label for="setor" class="labelInput" > Setor </label>
                     </div>
                 
                 <br>
 
-                <div class="inputBox"><input type ="text"name="processo"id="processo" class="inputUser"  required >
-                <label for="processo" class="labelInput"> Cargo </label></div>
+                <div class="inputBox"><input type ="text"name="cargo" id="cargo" class="inputUser"  required >
+                <label for="cargo" class="labelInput"> Cargo </label></div>
 
                 <p>Acesso</p>
-                <input type="radio" id="administrador" name="administrador" value="administrador" > 
-                <label for="administrador">Administrador</label>
-                <input type="radio" id="usuario" name="usuario" value="usuario"> 
-                <label for="usuario">Usuário</label>
+                <input type="radio" id="acesso" name="acesso" value="administrador" > 
+                <label for="acesso">Administrador</label>
+                <input type="radio" id="acesso" name="acesso" value="usuario"> 
+                <label for="acesso">Usuário</label>
 
                     <br><br>
 
-                <div class="inputBox"><input type ="text"name="processo"id="processo" class="inputUser"  required >
-                <label for="processo" class="labelInput"> Nome login </label></div>
+                <div class="inputBox"><input type ="text"name="nome_login"id="nome_login" class="inputUser"  required >
+                <label for="nome_login" class="labelInput"> Nome login </label></div>
                     <br>
-                <div class="inputBox"><input type ="password"name="processo"id="processo" class="inputUser"  required >
-                <label for="processo" class="labelInput"> Senha </label></div>
+                <div class="inputBox"><input type ="password" name="senha" id="senha" class="inputUser"  required >
+                <label for="senha" class="labelInput"> Senha </label></div>
                 <br>
-                <div class="inputBox"><input type ="password"name="processo"id="processo" class="inputUser"  required >
-                <label for="processo" class="labelInput"> Confirma Senha </label></div>
+                <div class="inputBox"><input type ="password"name="confirma_senha"id="confirma_senha" class="inputUser"  required >
+                <label for="confirma_senha" class="labelInput"> Confirma Senha </label></div>
 <br><br>
                 <input type="submit" nome="submit" id= "submit"> 
                 </fieldset>

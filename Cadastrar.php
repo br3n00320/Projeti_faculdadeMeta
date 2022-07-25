@@ -114,57 +114,57 @@ mysqli_close($conexao);
                 <legend>   <b> FORMULÁRIO DE PROTOCOLO  </b> </legend>
                 <br>
 
-                <div class="inputBox"> <input type ="text" name="gleba" id="gleba" class="inputUser" required >
+                <div class="inputBox"> <input type ="text" name="gleba" id="1" class="inputUser" required >
                 <label for="gleba" class="labelInput" >Gleba</label>
                 </div>
 
                 <br> 
 
-                <div class="inputBox"><input type ="text" name="municipio" id="municipio" class="inputUser" required >
+                <div class="inputBox"><input type ="text" name="municipio" id="2" class="inputUser" required >
                     <label for="municipio" class="labelInput" >Município </label></div>
 
                 <br> 
 
-                <div class="inputBox"><input type ="text" name="nome" id="nome" class="inputUser" required >
+                <div class="inputBox"><input type ="text" name="nome" id="3" class="inputUser" required >
                     <label for="nome" class="labelInput" > Nome completo </label>
                     </div>
                 
                 <br>
 
-                <div class="inputBox"><input type ="text"name="processo"id="processo" class="inputUser"  required >
+                <div class="inputBox"><input type ="text"name="processo"id="4" class="inputUser"  required >
                 <label for="processo" class="labelInput">Nº Processo </label></div>
 
                 <br>
 
-                <div class="inputBox"><input type ="text" name="entrada" id="entrada" class="inputUser" required >
+                <div class="inputBox"><input type ="text" name="entrada" id="5" class="inputUser" required >
                     <label for="entrada" class="labelInput" >Entrada</label></div>
 
                 <br>
                 
-                <div class="inputBox"><input type ="text" name="area" id="area" class="inputUser" required >
+                <div class="inputBox"><input type ="text" name="area" id="6" class="inputUser" required >
                     <label for="area" class="labelInput" >Área (ha / m^2)</label></div>
 
                 
 
                 <p>Vistoria</p>
-                <input type="radio" id="vistoria" name="vistoria" value="sim" required> 
+                <input type="radio" id="7" name="vistoria" value="sim" required> 
                 <label for="vistoria">Sim</label>
-                <input type="radio" id="vistoria" name="vistoria" value="Não" required> 
+                <input type="radio" id="8" name="vistoria" value="Não" required> 
                 <label for="vistoria">Não</label>
 
                 <br> <br>
 
-                <div class="inputBox"><input type ="text" name="caixa" id="caixa" class="inputUser" required >
+                <div class="inputBox"><input type ="text" name="caixa" id="9" class="inputUser" required >
                     <label for="caixa"class="labelInput" >Caixa</label></div>
 
                 <br>
 
-                <div class="inputBox"><input type ="text" name="estatus" id="estatus" class="inputUser" required >
+                <div class="inputBox"><input type ="text" name="estatus" id="10" class="inputUser" required >
                     <label for="estatus" class="labelInput" >Estatus</label></div>
 
                 <br>
 
-                <div class="inputBox"><input type ="text" name="observacoes" id="observacoes" class="inputUser" required >
+                <div class="inputBox"><input type ="text" name="observacoes" id="11" class="inputUser" required >
                     <label for="observacoes" class="labelInput" >observações</label>
                 </div>
 
